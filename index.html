@@ -1,93 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santa Bárbara Burgers | Vigo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+    :root{
+      --bg:#0f0f0f;
+      --card:#171717;
+      --accent:#f5c542;
+      --muted:#bdbdbd;
+      --wa:#25D366;
     }
-    header {
-      background: #000;
-      padding: 20px;
-      text-align: center;
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#fff;}
+    header{background:#000;padding:22px 16px;text-align:center;border-bottom:1px solid #222;}
+    header h1{margin:0;color:var(--accent);font-size:34px;letter-spacing:.2px}
+    header p{margin:8px 0 0;color:var(--muted)}
+    .container{max-width:980px;margin:0 auto;padding:18px 14px 40px;}
+    .btn{
+      display:inline-block;background:var(--wa);color:#000;padding:14px 18px;
+      margin:10px 0;text-decoration:none;font-weight:800;border-radius:10px;
     }
-    header h1 {
-      margin: 0;
-      color: #f5c542;
+    .btn.secondary{background:#222;color:#fff;border:1px solid #333}
+    .section{margin-top:26px;}
+    .section h2{margin:0 0 12px;font-size:24px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    .card{
+      background:var(--card);border:1px solid #222;border-radius:14px;overflow:hidden;
     }
-    .container {
-      padding: 20px;
-    }
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: #000;
-      padding: 15px 20px;
-      margin: 10px 0;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    .section {
-      margin-top: 40px;
-    }
-    footer {
-      background: #000;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
+    .card img{width:100%;height:220px;object-fit:cover;display:block;background:#0b0b0b}
+    .card .pad{padding:12px}
+    .name{margin:0;color:var(--accent);font-size:18px}
+    .price{margin:8px 0 0;font-weight:900;font-size:18px}
+    .mini{margin:10px 0 0}
+    .mini a{display:inline-block}
+    .info{background:#101010;border:1px solid #222;border-radius:14px;padding:14px}
+    .info p{margin:8px 0;color:#eaeaea}
+    footer{background:#000;padding:18px;text-align:center;font-size:13px;color:#aaa;border-top:1px solid #222;}
+    a.link{color:var(--accent);text-decoration:none}
   </style>
 </head>
 
 <body>
-
 <header>
   <h1>🍔 Santa Bárbara Burgers</h1>
   <p>Hamburguesas artesanales en Vigo</p>
+
+  <a class="btn" href="https://wa.me/34630522040?text=Hola%20Santa%20B%C3%A1rbara%20Burgers%2C%20quiero%20hacer%20un%20pedido." target="_blank">
+    📲 Pedir por WhatsApp
+  </a>
 </header>
 
 <div class="container">
 
-  <a class="btn" href="https://wa.me/34630522040" target="_blank">
-    📲 Pedir por WhatsApp
-  </a>
-
   <div class="section">
-    <h2>📍 Dirección</h2>
-    <p>Rúa de Rosalía de Castro 32, Vigo</p>
+    <h2>📍 Información</h2>
+    <div class="info">
+      <p><strong>Dirección:</strong> Rúa de Rosalía de Castro 32, Vigo</p>
+      <p><strong>Teléfono:</strong> <a class="link" href="tel:+34630522040">+34 630 52 20 40</a></p>
+      <p><strong>Delivery:</strong> Disponible en <strong>Glovo</strong></p>
+      <p><strong>Instagram:</strong> <a class="link" href="https://www.instagram.com/santabarbaraburgersvigo" target="_blank">@santabarbaraburgersvigo</a></p>
+      <p><strong>Email:</strong> <a class="link" href="mailto:santabenigna1978@gmail.com">santabenigna1978@gmail.com</a></p>
+    </div>
   </div>
 
   <div class="section">
-    <h2>📞 Teléfono</h2>
-    <p>+34 630 52 20 40</p>
+    <h2>🍔 Burgers Santa Bárbara</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="img/clasica.jpg" alt="Clásica">
+        <div class="pad">
+          <p class="name">Clásica</p>
+          <p class="price">8,70 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Cl%C3%A1sica%20(8%2C70%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/trufa-royale.jpg" alt="Trufa Royale">
+        <div class="pad">
+          <p class="name">Trufa Royale</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Trufa%20Royale%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/santa-creep.jpg" alt="Santa Creep">
+        <div class="pad">
+          <p class="name">Santa Creep</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santa%20Creep%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/santa-cebolla-oklahoma.jpg" alt="Santa Cebolla de Oklahoma">
+        <div class="pad">
+          <p class="name">Santa Cebolla de Oklahoma</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santa%20Cebolla%20de%20Oklahoma%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/santa-rulo-cabra.jpg" alt="Santa Rulo de Cabra">
+        <div class="pad">
+          <p class="name">Santa Rulo de Cabra</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santa%20Rulo%20de%20Cabra%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/provo-pesto.jpg" alt="Provo Pesto">
+        <div class="pad">
+          <p class="name">Provo Pesto</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Provo%20Pesto%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/santa-lotus.jpg" alt="Santa Lotus">
+        <div class="pad">
+          <p class="name">Santa Lotus</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santa%20Lotus%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/reina-roquefort.jpg" alt="Reina Roquefort">
+        <div class="pad">
+          <p class="name">Reina Roquefort</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Reina%20Roquefort%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/santa-pistacho.jpg" alt="Santa Pistacho">
+        <div class="pad">
+          <p class="name">Santa Pistacho</p>
+          <p class="price">8,80 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santa%20Pistacho%20(8%2C80%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/the-cartel.jpg" alt="Santanera estilo The Cartel">
+        <div class="pad">
+          <p class="name">Santanera estilo “The Cartel”</p>
+          <p class="price">8,90 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Santanera%20estilo%20The%20Cartel%20(8%2C90%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/bestia-bbq.jpg" alt="La Bestia BBQ">
+        <div class="pad">
+          <p class="name">La Bestia BBQ</p>
+          <p class="price">8,90 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20La%20Bestia%20BBQ%20(8%2C90%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/tentacion-latina.jpg" alt="La Tentación Latina">
+        <div class="pad">
+          <p class="name">La Tentación Latina</p>
+          <p class="price">8,90 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20La%20Tentaci%C3%B3n%20Latina%20(8%2C90%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/bestia-negra.jpg" alt="La Bestia Negra">
+        <div class="pad">
+          <p class="name">La Bestia Negra</p>
+          <p class="price">8,90 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20La%20Bestia%20Negra%20(8%2C90%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/triple-gallega.jpg" alt="Triple Gallega">
+        <div class="pad">
+          <p class="name">Triple Gallega</p>
+          <p class="price">12,50 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20Triple%20Gallega%20(12%2C50%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="section">
-    <h2>🍟 Delivery</h2>
-    <p>Disponible en <strong>Glovo</strong></p>
-  </div>
+    <h2>🏠 Nuestras Hamburguesas de la Casa</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/la-llanera.jpg" alt="La Llanera">
+        <div class="pad">
+          <p class="name">La Llanera</p>
+          <p class="price">13,00 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20La%20Llanera%20(13%2C00%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="section">
-    <h2>📸 Instagram</h2>
-    <a class="btn" href="https://www.instagram.com/santabarbaraburgersvigo" target="_blank">
-      Ver Instagram
-    </a>
-  </div>
-
-  <div class="section">
-    <h2>✉️ Contacto</h2>
-    <p>
-      <a href="mailto:santabenigna1978@gmail.com" style="color:#f5c542;">
-        santabenigna1978@gmail.com
-      </a>
-    </p>
+      <div class="card">
+        <img src="img/especial-casa.jpg" alt="Especial de la Casa">
+        <div class="pad">
+          <p class="name">La Especial de la Casa</p>
+          <p class="price">13,00 €</p>
+          <div class="mini">
+            <a class="btn" href="https://wa.me/34630522040?text=Hola%2C%20quiero%201%20La%20Especial%20de%20la%20Casa%20(13%2C00%E2%82%AC).%20Mi%20direcci%C3%B3n%20es%3A%20" target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -95,6 +258,5 @@
 <footer>
   © Santa Bárbara Burgers · Vigo
 </footer>
-
 </body>
 </html>
